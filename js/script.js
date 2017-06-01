@@ -15,3 +15,23 @@ var personajes=["mozart","cervantes","nietzsche","kepler","darwin","aristoteles"
 var segundos="00",minutos="00",horas="00";
 var indice=0,conFallos=0,maxFallos=7,repetidor;
 var debug=false,empezado=false;
+//Función usada para dar comienzo al juego inicializando variables globales, etc
+function comienzo() {
+	var eleccion="";
+	indice=parseInt(Math.random()*personajes.length);
+	for(var i=0;i<personajes[indice].length;i++)
+		eleccion+="_ ";
+	
+	for(var i=0;i<document.forms[0].elements.length;i++)
+		document.forms[0].elements[i].disabled=false;
+	document.getElementById('empezar').disabled=true;
+	document.getElementById('palabra').style.visibility="visible";
+	document.getElementById('texto').innerHTML=eleccion;
+	repetidor=setInterval('contadorReloj()',1000);
+	empezado=true;
+	cambiaImagen();
+	if(debug) {													//Si el "modo" debug esta activado, mostraremos el personaje al comienzo del juego
+		alert(personajes[indice]);								//y habilitaremos un botón para borrar los datos de la cookie que almacena el record
+		document.getElementById('oculto').style="display:inline;";
+	}
+}
