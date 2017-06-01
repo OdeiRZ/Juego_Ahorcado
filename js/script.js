@@ -35,3 +35,19 @@ function comienzo() {
 		document.getElementById('oculto').style="display:inline;";
 	}
 }
+//Función usada para reiniciar el juego, parando el reloj y reiniciando variables y botones
+function reinicio() {
+	horas="00";
+	minutos="00";
+	segundos="00";
+	conFallos=0;
+	empezado=false;
+	cambiaImagen();
+	clearInterval(repetidor);
+	
+	for(var i=0;i<document.forms[0].elements.length;i++)
+		document.forms[0].elements[i].disabled=true;
+	document.getElementById('empezar').disabled=false;//document.getElementById('oculto').disabled=false;
+	document.getElementById('palabra').style.visibility="hidden";
+	document.getElementById('tiempo').innerHTML=horas+":"+minutos+":"+segundos;
+}
