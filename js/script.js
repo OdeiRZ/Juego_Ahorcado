@@ -102,3 +102,20 @@ function finJuego(cadena){
 	}
 	document.getElementById('ahorcado').src="img/"+personajes[indice]+".jpg";
 }
+//Función usada para mostrar un contador de tiempo de juego 
+//que habilitaremos o desactivaremos según nos interese
+function contadorReloj() {										
+	segundos++;	
+	if(segundos=="60") {
+		segundos="0";
+		minutos++;
+		(minutos<10)? minutos="0"+minutos : "";
+	}
+	if(minutos=="60") {
+		minutos="0";
+		horas++;
+		(horas<10) ? horas="0"+horas : "";
+	}
+	(segundos<10)?segundos="0"+segundos:"";
+	document.getElementById('tiempo').innerHTML=horas+":"+minutos+":"+segundos;
+}
