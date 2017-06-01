@@ -82,3 +82,23 @@ function cambiaImagen()	{
 	var nombre=(empezado) ? conFallos : "ahorcado";
 	document.getElementById('ahorcado').src="img/"+nombre+".png";
 }
+//Función usada para comprobar ganador del juego a partir de cadena	
+//recibida como parámetro, si el ganador es el usuario se comprueba
+//si el tiempo utilizado es inferior al record almacenado
+function finJuego(cadena){																	
+	empezado=false;												
+	clearInterval(repetidor);									
+	var tiempo="";
+	(horas>0) 	? tiempo+=horas+" horas " 	   : "";
+	(minutos>0)	? tiempo+=minutos+" minutos y ": "";
+	(segundos>0)? tiempo+=segundos+" segundos" : "";
+	
+	if(cadena=="PC")
+		alert("Lo siento, has perdido\n\nEl Personaje era: "+personajes[indice]);
+	else {
+		var tiempoSeg=(parseInt(segundos))+(parseInt(minutos)*60/100)+(parseInt(horas)*3600/10);
+		alert("¡¡Enhorabuena, has ganado!!\n\nTu tiempo fue de: "+tiempo);
+		(comprobarCookie(tiempoSeg)/*,debug)*/)?alert("¡¡Has batido el Record!!\n\nSe ha registrado tu tiempo"):alert("No has batido el Record\n\nSigue intentándolo");
+	}
+	document.getElementById('ahorcado').src="img/"+personajes[indice]+".jpg";
+}
