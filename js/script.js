@@ -51,3 +51,29 @@ function reinicio() {
 	document.getElementById('palabra').style.visibility="hidden";
 	document.getElementById('tiempo').innerHTML=horas+":"+minutos+":"+segundos;
 }
+//Función usada para validar la letra pulsada recibida como parámetro y comprobar si la palabra a sido acertada o no
+function comprobarLetra(letra) {								
+	if(empezado) {												
+		document.getElementById(letra).disabled=true;			//Comprobacion usada por seguridad ante deshabilitacion de botones (via html)
+		
+		var cadena=document.getElementById('texto').innerHTML.split(" ");
+		var cadenaAux="", existeLetra=false;
+		for(var i=0;i<personajes[indice].length;i++) {
+			if(personajes[indice].charAt(i)==letra) {
+				cadenaAux+=letra+" ";
+				existeLetra=true;
+			}
+			else
+				cadenaAux+=cadena[i]+" ";
+		}
+		document.getElementById('texto').innerHTML=cadenaAux;
+		if(cadenaAux.split(" ").indexOf("_") == -1)
+			finJuego("Jugador");
+		if(!existeLetra) {
+			conFallos++;
+			cambiaImagen();
+			if(conFallos==maxFallos)					
+				finJuego("PC");
+		}
+	}
+}
