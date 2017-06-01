@@ -2,8 +2,24 @@
 <html lang="es">
 	<head>
 		<meta charset="utf-8"/>
-		<title></title>
+		<title>Ahorcado</title>
 	</head>
 	<body>
+		<div id="contenedor">
+			<h2>Ahorcado con Personajes</h2>
+			<img id="ahorcado" alt="imagen pixel" src="#">
+			<div id="palabra">
+				<h3>Personaje</h3>
+				<p id="texto"></p>
+			</div>
+			<h3>Teclado</h3>
+			<form id="formulario">
+				<h3>Tiempo</h3>
+				<p id="tiempo">00:00:00</p>
+				<input type="button" value="Comenzar" 	   id="empezar"   onClick="comienzo();" 		class="envio">
+				<input type="button" value="Reiniciar" 	   id="reiniciar" onClick="reinicio();" 		class="envio" disabled>
+				<input type="button" value="Borrar Cookie" id="oculto"	  onClick="borrarCookie('id');" class="oculto">
+			</form>
+		</div>
 	</body>
 </html>
