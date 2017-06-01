@@ -77,3 +77,8 @@ function comprobarLetra(letra) {
 		}
 	}
 }
+//Función usada para cambiar la imágen del juego a partir del número de errores cometidos, usando el contador como nombre de imágen
+function cambiaImagen()	{										
+	var nombre=(empezado) ? conFallos : "ahorcado";
+	document.getElementById('ahorcado').src="img/"+nombre+".png";
+}
