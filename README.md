@@ -1,4 +1,4 @@
-Juego Ahorcado 0.9
+Juego Ahorcado 0.91
 ================================
 
 Aplicación web desarrollada mediante JavaScript y HTML que simula el clásico juego del ahorcado con personajes 
@@ -9,6 +9,6 @@ Desde el Programa podremos seleccionar las letras que componen los nombres a adi
 efectos interactivos mientras hacemos uso de la Aplicación para una interacción con el usuario más satisfactoria.
 
 ## Licencia
-Esta aplicación se ofrece bajo licencia [AGPL versión 3].
+Esta aplicación se ofrece bajo licencia [GPL versión 3].
 
-[AGPL versión 3]: http://www.gnu.org/licenses/agpl.html
+[GPL versión 3]: https://www.gnu.org/licenses/gpl-3.0.en.html
