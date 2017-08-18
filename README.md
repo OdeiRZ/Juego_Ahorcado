@@ -8,12 +8,16 @@ Interfaces Gráficas y elementos Multimedia para dotar al Programa de interactiv
 Desde el programa podremos seleccionar las letras que componen los nombres a adivinar, añadiendo además 
 efectos interactivos mientras hacemos uso de la aplicación para una interacción con el usuario más satisfactoria.
 
+Para cualquier referencia relacionada con el sitio, podemos ver la aplicación desplegada
+visitando el siguiente [enlace].
+
 ## Requisitos
 - Navegador Web [Chrome], [Firefox], [Opera], [Microsoft Edge], etc..
 
 ## Licencia
 Esta aplicación se ofrece bajo licencia [GPL versión 3].
 
+[enlace]: https://odeirz.github.io/Juego_Ahorcado/public/
 [Chrome]: https://www.google.es/chrome/browser/desktop/index.html
 [Firefox]: https://www.mozilla.org/es-ES/firefox/new/
 [Opera]: http://www.opera.com/es
