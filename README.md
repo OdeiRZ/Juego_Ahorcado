@@ -3,12 +3,12 @@ Juego Ahorcado 0.91
 
 Aplicación web desarrollada mediante JavaScript y HTML que simula el clásico juego del ahorcado con personajes 
 famosos, permitiendo al usuario jugar contra el ordenador y almacenar sus propios records haciendo uso de 
-Interfaces Gráficas y elementos Multimedia para dotar al Programa de interactividad.
+interfaces gráficas y elementos multimedia para dotar al programa de interactividad.
 
 Desde el programa podremos seleccionar las letras que componen los nombres a adivinar, añadiendo además 
 efectos interactivos mientras hacemos uso de la aplicación para una interacción con el usuario más satisfactoria.
 
-Para cualquier referencia relacionada con el sitio, podemos ver la aplicación desplegada
+Para cualquier referencia relacionada con el juego, podemos ver la aplicación desplegada
 visitando el siguiente [enlace].
 
 ## Requisitos
